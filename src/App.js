@@ -18,12 +18,13 @@ function App() {
     };
 
     React.useEffect(() => {
-        console.log(ulRef);
+        ulRef.current.addEventListener('scroll', handleScroll);
     }, []);
 
 
     const removeScroll = () => {
-        ///ulElem.removeEventListener('scroll', handleScroll);
+        console.log(ulRef);
+        ulRef.current.removeEventListener('scroll', handleScroll);
     };
 
     return (
